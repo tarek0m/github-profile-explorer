@@ -1,0 +1,131 @@
+.repoListContainer {
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.repoListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.repoListTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.sortOptions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.sortSelect {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--gray-alpha-200);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.repoList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.repoCard {
+  background-color: var(--background);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.repoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.repoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.repoName {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.repoName a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.repoName a:hover {
+  text-decoration: underline;
+}
+
+.repoStats {
+  display: flex;
+  gap: 12px;
+}
+
+.repoStat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.statIcon {
+  font-size: 16px;
+}
+
+.repoDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--foreground);
+  margin: 8px 0 12px;
+}
+
+.repoFooter {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .repoListHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .repoHeader {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .repoStats {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
