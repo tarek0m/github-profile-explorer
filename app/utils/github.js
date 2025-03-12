@@ -1,4 +1,7 @@
-export const fetchGithubUserData = async (username, { setUser, setRepos, setLoading, setError }) => {
+export const fetchGithubUserData = async (
+  username,
+  { setUser, setRepos, setLoading, setError }
+) => {
   if (setLoading) setLoading(true);
   if (setError) setError(null);
 
@@ -25,7 +28,16 @@ export const fetchGithubUserData = async (username, { setUser, setRepos, setLoad
     const reposData = await reposResponse.json();
     if (setRepos) setRepos(reposData);
   } catch (err) {
-    if (setError) setError(err.message);
+    let errorMessage = err.message;
+
+    if (err.message.includes('404')) {
+      errorMessage =
+        'Username not found. Please check the spelling and try again.';
+    } else if (err.message.includes('403')) {
+      errorMessage = 'API rate limit exceeded. Please try again later.';
+    }
+
+    if (setError) setError(errorMessage);
     if (setUser) setUser(null);
     if (setRepos) setRepos([]);
   } finally {
