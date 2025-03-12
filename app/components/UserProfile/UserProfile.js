@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './UserProfile.module.css';
+import Image from 'next/image';
 
 export default function UserProfile({ user }) {
   if (!user) return null;

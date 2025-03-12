@@ -9,6 +9,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  padding: 16px;
+  gap: 10px;
 }
 
 .repoListTitle {
@@ -39,6 +41,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
 }
 
 .repoCard {

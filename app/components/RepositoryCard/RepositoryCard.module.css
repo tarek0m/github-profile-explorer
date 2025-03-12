@@ -1,0 +1,70 @@
+.repoCard {
+  background-color: var(--background);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.repoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.repoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.repoName {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.repoName a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.repoName a:hover {
+  text-decoration: underline;
+}
+
+.repoStats {
+  display: flex;
+  gap: 12px;
+}
+
+.repoStat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.statIcon {
+  font-size: 16px;
+}
+
+.repoDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--foreground);
+  margin: 8px 0 12px;
+}
+
+.repoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.repoUpdated {
+  color: var(--text-secondary);
+}
