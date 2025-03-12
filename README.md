@@ -1,6 +1,6 @@
 # GitHub Profile Explorer
 
-A powerful web application that allows you to explore and compare GitHub user profiles, built with Next.js.
+A powerful web application that allows you to explore and compare GitHub user profiles, built with Next.js. Check out the live demo at [https://github-profile-explorer-tarek0m.vercel.app/](https://github-profile-explorer-tarek0m.vercel.app/)
 
 ## Features
 
@@ -10,12 +10,13 @@ A powerful web application that allows you to explore and compare GitHub user pr
 - 📈 Analyze repository statistics (stars, forks).
 - 🎨 Clean and modern UI with Geist font.
 - 📱 Responsive design for all devices.
+- 📊 Built-in analytics for tracking usage patterns.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn package manager
 
 ### Installation
@@ -63,17 +64,28 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```
 app/
   components/         # React components
+    CompareSection/   # Profile comparison functionality
+    Header/           # Application header
+    MainContent/      # Main content container
+    RepositoryCard/   # Individual repository display
+    RepositoryList/   # List of repositories
+    SearchBar/        # Search functionality
+    UserProfile/      # User profile display
+  utils/
+    github.js        # GitHub API integration
   page.js            # Main application page
   layout.js          # Root layout component
+  globals.css        # Global styles
 public/              # Static assets
 ```
 
 ## Built With
 
-- [Next.js](https://nextjs.org/) - React framework
-- [React](https://reactjs.org/) - UI library
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React 19](https://reactjs.org/) - UI library
 - [GitHub API](https://docs.github.com/en/rest) - Data source
 - [Geist Font](https://vercel.com/font) - Typography
+- [Vercel Analytics](https://vercel.com/analytics) - Usage analytics integration
 
 ## Contributing
 
