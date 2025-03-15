@@ -23,7 +23,7 @@ export default function RepositoryCard({ repo }) {
             </div>
           )}
           <div className={styles.repoStat}>
-            <span className={styles.statIcon}>🍴</span>
+            <span className={styles.statIcon}>🔀</span>
             <span>{repo.forks_count}</span>
           </div>
         </div>
